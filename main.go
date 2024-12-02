@@ -17,6 +17,7 @@ func main() {
 	functions := map[string]func() string{
 		"d1p1": day1problem1,
 		"d1p2": day1problem2,
+		"d2p1": day2problem1,
 	}
 
 	function, exists := functions[pn]
