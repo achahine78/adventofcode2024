@@ -21,6 +21,8 @@ func main() {
 		"d2p2": day2problem2,
 		"d3p1": day3problem1,
 		"d3p2": day3problem2,
+		"d4p1": day4problem1,
+		"d4p2": day4problem2,
 	}
 
 	function, exists := functions[pn]
