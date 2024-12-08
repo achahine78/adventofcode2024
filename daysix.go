@@ -6,17 +6,6 @@ import (
 	"strings"
 )
 
-type coordinates struct {
-	x int
-	y int
-}
-
-type directedCoordinates struct {
-	x         int
-	y         int
-	direction string
-}
-
 func printMatrix(matrix [][]string, i, j int, direction string, visited map[coordinates]bool) {
 	for a := 0; a < len(matrix); a++ {
 		for b := 0; b < len(matrix[a]); b++ {

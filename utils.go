@@ -48,3 +48,14 @@ func deduplicate(slice []int) []int {
 
 	return deduplicatedList
 }
+
+type coordinates struct {
+	x int
+	y int
+}
+
+type directedCoordinates struct {
+	x         int
+	y         int
+	direction string
+}
