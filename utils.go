@@ -59,3 +59,21 @@ type directedCoordinates struct {
 	y         int
 	direction string
 }
+
+type queue struct {
+	queue [][]int
+}
+
+func (q *queue) enqueue(item []int) {
+	q.queue = append(q.queue, item)
+}
+
+func (q *queue) dequeue() []int {
+	result := q.queue[0]
+	q.queue = q.queue[1:]
+	return result
+}
+
+func (q *queue) length() int {
+	return len(q.queue)
+}
