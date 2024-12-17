@@ -27,7 +27,7 @@ func countPathsToPeaks(i, j int, inputMatrix [][]int, distinct bool) int {
 	visited := make(map[coordinates]bool)
 	peakCount := 0
 
-	neighbourQueue := queue{}
+	neighbourQueue := queue[[]int]{}
 	neighbourQueue.enqueue([]int{i, j})
 
 	for neighbourQueue.length() != 0 {

@@ -60,20 +60,20 @@ type directedCoordinates struct {
 	direction string
 }
 
-type queue struct {
-	queue [][]int
+type queue[T any] struct {
+	queue []T
 }
 
-func (q *queue) enqueue(item []int) {
+func (q *queue[T]) enqueue(item T) {
 	q.queue = append(q.queue, item)
 }
 
-func (q *queue) dequeue() []int {
+func (q *queue[T]) dequeue() T {
 	result := q.queue[0]
 	q.queue = q.queue[1:]
 	return result
 }
 
-func (q *queue) length() int {
+func (q *queue[T]) length() int {
 	return len(q.queue)
 }
